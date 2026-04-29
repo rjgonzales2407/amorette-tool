@@ -382,37 +382,16 @@ async function genPost() {
   var topic = document.getElementById('pt').value.trim();
   if (!topic) { alert('Please describe what this post is about.'); return; }
   var aMap = { coaches:'service-led coaches and educators (B2B, teaching skills, $1-3M/year, integrity-driven, distrust hype)', agencies:'agency owners (scaling delivery without losing control, protecting reputation, need reliable execution systems)', biz:'business owners who need stable funnel systems and lead flow', all:'coaches, agency owners, and business owners' };
-  var pMap = { edu:'PILLAR: Educational. Teach a concept — 4-stage ascension model, why sequence beats speed, how architecture differs from just building, how awareness levels govern which offers people see.', prob:'PILLAR: Problem/Agitation. Tell a real story about what goes wrong without architecture — emails not sending panic, the $10K-$15K rebuild consequence, broken handoffs during launches, the expensive fix-it-later trap.', proc:'PILLAR: Process Explanation. Show what actually happens during the Architecture Phase — the 8 deliverables, the Week 1 mapping process, how the complete buyer journey gets mapped before anything is built in GoHighLevel.', proof:'PILLAR: Client Proof. Reference a real scenario showing cost comparison. A course creator who rebuilt multiple times ($15K-$28K total) versus $400 architecture. Real outcomes. Do not use real client names.', pers:'PILLAR: Personal Story. Share the evolution from fast builder to strategic architect. A specific moment that changed the approach. What was learned from watching clients rebuild.' };
-  var hMap = { assumption:'HOOK: Challenge-assumption formula. Example: Why do we plan weddings for 12 months but build funnels in 2 weeks?', story:'HOOK: Real client story. One specific painful moment. Short and vivid. Example: She wanted it built in 2 weeks. 6 months later, she was rebuilding everything.', confession:'HOOK: Personal confession. Something believed before that turned out to be wrong. Example: I used to think architecture was overthinking. Then I watched a client spend $15K proving me wrong.', number:'HOOK: Specific number that makes the cost undeniable. Example: $15,000. That is what rebuilding costs when you skip the architecture phase.', question:'HOOK: Provocative question that names the exact situation the audience is already in. Specific and recognizable — not generic.', without:'HOOK: Without/even if structure. Example: You can have a funnel that holds — without rebuilding it every launch, even if you have tried three agencies already.', fear:'HOOK: Fear of inaction. Name what staying stuck is actually costing them. Example: Every month without architecture is one launch closer to another $10K rebuild.' };
-  var angMap = { arch_speed:'ANGLE: Architecture beats speed. Planning before touching GoHighLevel is the core differentiator that prevents the $10K-$28K rebuild cycle.', map_first:'ANGLE: Map before build. The complete buyer journey must be visible and validated before a single page is created.', rebuild:'ANGLE: Every rebuild traces back to missing architecture at the start. It is never random — always predictable and preventable.', cost:'ANGLE: $400 in architecture saves $10K-$28K in rebuilds. The math is impossible to ignore when you have seen what rebuilds actually cost.', integrated:'ANGLE: A funnel that is not integrated is not done. Each piece may look fine but the handoffs between them are where revenue leaks.', dfy_own:'ANGLE: Real done-for-you means owning the outcome end-to-end — not just completing a task list that someone else defined.', sequence:'ANGLE: Sequence is the difference between a system that holds and one that breaks. Build in the wrong order and you will rebuild forever.' };
+  var pMap = { edu:'PILLAR: Educational. Teach a concept - 4-stage ascension model, why sequence beats speed, how architecture differs from just building, how awareness levels govern which offers people see.', prob:'PILLAR: Problem/Agitation. Tell a real story about what goes wrong without architecture - emails not sending panic, the $10K-$15K rebuild consequence, broken handoffs during launches, the expensive fix-it-later trap.', proc:'PILLAR: Process Explanation. Show what actually happens during the Architecture Phase - the 8 deliverables, the Week 1 mapping process, how the complete buyer journey gets mapped before anything is built in GoHighLevel.', proof:'PILLAR: Client Proof. Reference a real scenario showing cost comparison. A course creator who rebuilt multiple times ($15K-$28K total) versus $400 architecture. Real outcomes. Do not use real client names.', pers:'PILLAR: Personal Story. Share the evolution from fast builder to strategic architect. A specific moment that changed the approach. What was learned from watching clients rebuild.' };
+  var hMap = { assumption:'HOOK: Challenge-assumption formula. Example: Why do we plan weddings for 12 months but build funnels in 2 weeks?', story:'HOOK: Real client story. One specific painful moment. Short and vivid. Example: She wanted it built in 2 weeks. 6 months later, she was rebuilding everything.', confession:'HOOK: Personal confession. Something believed before that turned out to be wrong. Example: I used to think architecture was overthinking. Then I watched a client spend $15K proving me wrong.', number:'HOOK: Specific number that makes the cost undeniable. Example: $15,000. That is what rebuilding costs when you skip the architecture phase.', question:'HOOK: Provocative question that names the exact situation the audience is already in. Specific and recognizable - not generic.', without:'HOOK: Without/even if structure. Example: You can have a funnel that holds - without rebuilding it every launch, even if you have tried three agencies already.', fear:'HOOK: Fear of inaction. Name what staying stuck is actually costing them. Example: Every month without architecture is one launch closer to another $10K rebuild.' };
+  var angMap = { arch_speed:'ANGLE: Architecture beats speed. Planning before touching GoHighLevel is the core differentiator that prevents the $10K-$28K rebuild cycle.', map_first:'ANGLE: Map before build. The complete buyer journey must be visible and validated before a single page is created.', rebuild:'ANGLE: Every rebuild traces back to missing architecture at the start. It is never random - always predictable and preventable.', cost:'ANGLE: $400 in architecture saves $10K-$28K in rebuilds. The math is impossible to ignore when you have seen what rebuilds actually cost.', integrated:'ANGLE: A funnel that is not integrated is not done. Each piece may look fine but the handoffs between them are where revenue leaks.', dfy_own:'ANGLE: Real done-for-you means owning the outcome end-to-end - not just completing a task list that someone else defined.', sequence:'ANGLE: Sequence is the difference between a system that holds and one that breaks. Build in the wrong order and you will rebuild forever.' };
   var oMap = { none:'OFFER: Pure value post. Do not mention any specific offer.', arch:'OFFER: Near the end, naturally reference the Architecture Phase ($400, 8 deliverables in Week 1, 30-40 pages of documentation) as the obvious next step.', exec:'OFFER: Near the end, reference TCF Execution Only (ticket-based, pure build, for those who already have clear direction).', dfy:'OFFER: Near the end, reference DFY TCF (full Done-For-You AC Funnel build, starts at $10K).', cls:'OFFER: Near the end, reference Course Launch Shortcut (full ecosystem, starts at $5K).' };
   var obMap = { none:'', later:'ADDRESS THIS OBJECTION naturally in the post: Cannot I just fix it later?', whypay:'ADDRESS THIS OBJECTION naturally: Why pay for architecture when I can just start building?', what400:'ADDRESS THIS OBJECTION naturally: What exactly do I get for $400?', notime:'ADDRESS THIS OBJECTION naturally: I do not have time to create more offers.', onecourse:'ADDRESS THIS OBJECTION naturally: I just want one aligned course.' };
   var ang = document.querySelector('input[name="ang"]:checked');
   var angVal = ang ? ang.value : 'arch_speed';
   var obj = document.getElementById('pobj').value;
   var proof = document.getElementById('ppr').value.trim();
-  var p = 'Write 2 LinkedIn post VARIANTS for Amorette Digital Solutions.
-
-POST TOPIC: ' + topic + '
-TARGET AUDIENCE: ' + aMap[document.getElementById('pa').value] + '
-' + pMap[document.getElementById('pp').value] + '
-' + hMap[document.getElementById('ph').value] + '
-' + angMap[angVal] + '
-' + oMap[document.getElementById('po').value] + '
-' + (obMap[obj] ? obMap[obj] + '
-' : '') + (proof ? 'SPECIFIC DETAIL TO INCLUDE: ' + proof + '
-' : '') + '
-Post structure: Hook (1-2 lines that stop the scroll) then Setup/Context then Story or Example then Lesson/Takeaway then CTA
-4-6 short paragraphs with blank line between each. 160-230 words per variant.
-Use one of these CTAs at the end: Which deliverable would be most valuable for you right now? OR DM ARCHITECTURE if you are tired of rebuilding. OR Have you ever rebuilt something that could have been planned right the first time? OR What is the most expensive fix-it-later decision you have made?
-Use specific numbers. Sound like a real person who has seen this before.
-
-Format EXACTLY like this — nothing else before or after:
-VARIANT A:
-[full post here]
----
-VARIANT B:
-[full post here]';
+  var p = 'Write 2 LinkedIn post VARIANTS for Amorette Digital Solutions.\n\nPOST TOPIC: ' + topic + '\nTARGET AUDIENCE: ' + aMap[document.getElementById('pa').value] + '\n' + pMap[document.getElementById('pp').value] + '\n' + hMap[document.getElementById('ph').value] + '\n' + angMap[angVal] + '\n' + oMap[document.getElementById('po').value] + '\n' + (obMap[obj] ? obMap[obj] + '\n' : '') + (proof ? 'SPECIFIC DETAIL TO INCLUDE: ' + proof + '\n' : '') + '\nPost structure: Hook (1-2 lines that stop the scroll) then Setup/Context then Story or Example then Lesson/Takeaway then CTA\n4-6 short paragraphs with blank line between each. 160-230 words per variant.\nUse one of these CTAs at the end: Which deliverable would be most valuable for you right now? OR DM ARCHITECTURE if you are tired of rebuilding. OR Have you ever rebuilt something that could have been planned right the first time? OR What is the most expensive fix-it-later decision you have made?\nUse specific numbers. Sound like a real person who has seen this before.\n\nFormat EXACTLY like this - nothing else before or after:\nVARIANT A:\n[full post here]\n---\nVARIANT B:\n[full post here]';
   var btn = document.getElementById('btn-post');
   var outEl = document.getElementById('out-post');
   var varEl = document.getElementById('var-post');
@@ -445,19 +424,11 @@ VARIANT B:
 async function genComment() {
   var orig = document.getElementById('co').value.trim();
   if (!orig) { alert('Please paste the post or comment you want to reply to.'); return; }
-  var iMap = { value:'Add a specific genuinely useful insight. Name a root cause, make a distinction, or reframe something the author has not considered. Not generic validation.', convo:'Start a real conversation. Respond to the human experience in what they wrote. Ask one genuine question. No agenda, no pitch.', position:'Subtly position the architecture-first approach. Name the real root cause in a way that makes the value of mapping before building obvious — without announcing it as a sales move.', cta:'Offer a gentle, natural next step. Reference something specific from their post. Calm and human — not pushy.' };
+  var iMap = { value:'Add a specific genuinely useful insight. Name a root cause, make a distinction, or reframe something the author has not considered. Not generic validation.', convo:'Start a real conversation. Respond to the human experience in what they wrote. Ask one genuine question. No agenda, no pitch.', position:'Subtly position the architecture-first approach. Name the real root cause in a way that makes the value of mapping before building obvious - without announcing it as a sales move.', cta:'Offer a gentle, natural next step. Reference something specific from their post. Calm and human - not pushy.' };
   var intEl = document.querySelector('input[name="ci"]:checked');
   var intent = intEl ? intEl.value : 'value';
   var pt = document.getElementById('cpt').value.trim();
-  var p = 'Write a LinkedIn comment reply for Amorette Digital Solutions.
-
-ORIGINAL POST OR COMMENT:
-"' + orig + '"
-
-INTENT: ' + iMap[intent] + '
-' + (pt ? 'SPECIFIC POINT TO MAKE: ' + pt + '
-' : '') + '
-Rules: 2-4 sentences. Under 80 words. Do NOT start with Great post or Love this or any generic opener. Start with a real, specific thought triggered by what they actually wrote. Use periods, not exclamation points unless genuinely earned. Sound like a real expert who noticed something specific — not a marketer commenting for engagement. One emoji is acceptable if it genuinely fits — do not force it.';
+  var p = 'Write a LinkedIn comment reply for Amorette Digital Solutions.\n\nORIGINAL POST OR COMMENT:\n"' + orig + '"\n\nINTENT: ' + iMap[intent] + '\n' + (pt ? 'SPECIFIC POINT TO MAKE: ' + pt + '\n' : '') + '\nRules: 2-4 sentences. Under 80 words. Do NOT start with Great post or Love this or any generic opener. Start with a real, specific thought triggered by what they actually wrote. Use periods, not exclamation points unless genuinely earned. Sound like a real expert who noticed something specific - not a marketer commenting for engagement. One emoji is acceptable if it genuinely fits - do not force it.';
   var btn = document.getElementById('btn-cm');
   var outEl = document.getElementById('out-cm');
   var resEl = document.getElementById('cm-res');
@@ -471,16 +442,9 @@ async function genDM() {
   var ctx = document.getElementById('dc').value.trim();
   if (!ctx) { alert('Please tell me about this person first.'); return; }
   var wMap = { warm:'a warm lead who has engaged with Amorette LinkedIn content', cold:'cold outreach with no prior contact', follower:'someone who follows Amorette and has seen the content', referral:'someone referred by a mutual connection' };
-  var gMap = { convo:'Start a genuine low-pressure conversation. No pitch. Open a real door based on something specific about them.', qualify:'Gently explore whether they have the funnel or launch situation that Amorette is designed to solve. Ask — do not assume.', call:'Invite them to a clarity call. Specific, calm, no pressure. Make the next step feel obvious and easy.', followup:'Follow up after a specific previous interaction. Reference it naturally. Move the conversation forward one step.' };
+  var gMap = { convo:'Start a genuine low-pressure conversation. No pitch. Open a real door based on something specific about them.', qualify:'Gently explore whether they have the funnel or launch situation that Amorette is designed to solve. Ask - do not assume.', call:'Invite them to a clarity call. Specific, calm, no pressure. Make the next step feel obvious and easy.', followup:'Follow up after a specific previous interaction. Reference it naturally. Move the conversation forward one step.' };
   var notes = document.getElementById('dn').value.trim();
-  var p = 'Write a LinkedIn DM for Amorette Digital Solutions.
-
-WHO: ' + wMap[document.getElementById('dw').value] + '
-GOAL: ' + gMap[document.getElementById('dg').value] + '
-CONTEXT ABOUT THIS PERSON: ' + ctx + '
-' + (notes ? 'NOTES — THINGS TO MENTION OR AVOID: ' + notes + '
-' : '') + '
-Rules: 3-5 sentences. Under 100 words total. Reference something REAL and SPECIFIC from the context provided. No generic openers — no Hope this finds you well, no I have been following your journey, no I came across your profile. No pitch in first message unless goal is explicitly a call invite. Calm, direct, sounds like a person with standards who noticed something genuine. End with one low-pressure question or a clear, easy next step.';
+  var p = 'Write a LinkedIn DM for Amorette Digital Solutions.\n\nWHO: ' + wMap[document.getElementById('dw').value] + '\nGOAL: ' + gMap[document.getElementById('dg').value] + '\nCONTEXT ABOUT THIS PERSON: ' + ctx + '\n' + (notes ? 'NOTES - THINGS TO MENTION OR AVOID: ' + notes + '\n' : '') + '\nRules: 3-5 sentences. Under 100 words total. Reference something REAL and SPECIFIC from the context provided. No generic openers - no Hope this finds you well, no I have been following your journey, no I came across your profile. No pitch in first message unless goal is explicitly a call invite. Calm, direct, sounds like a person with standards who noticed something genuine. End with one low-pressure question or a clear, easy next step.';
   var btn = document.getElementById('btn-dm');
   var outEl = document.getElementById('out-dm');
   var resEl = document.getElementById('dm-res');
@@ -494,29 +458,10 @@ async function genClientEmail() {
   var ctx = document.getElementById('ec-context').value.trim();
   if (!ctx) { alert('Please describe the situation first.'); return; }
   var typeMap = { reply:'Reply to a client question or concern', report:'Deliver a project report, status update, or milestone summary', followup:'Follow up with a client who has not responded', onboard:'Send onboarding instructions or next steps to a new client', feedback:'Address client feedback, a concern, or a misunderstanding professionally', delay:'Communicate a delay, timeline change, or unexpected issue' };
-  var toneMap = { 'warm-professional':'Warm and professional — friendly but clear and on point', direct:'Direct and clear — get to the point immediately, no filler', reassuring:'Reassuring and calm — make the client feel confident and taken care of', firm:'Firm but respectful — clear about what is needed without being harsh' };
+  var toneMap = { 'warm-professional':'Warm and professional - friendly but clear and on point', direct:'Direct and clear - get to the point immediately, no filler', reassuring:'Reassuring and calm - make the client feel confident and taken care of', firm:'Firm but respectful - clear about what is needed without being harsh' };
   var points = document.getElementById('ec-points').value.trim();
   var avoid = document.getElementById('ec-avoid').value.trim();
-  var p = 'Write a client email for Amorette Digital Solutions.
-
-EMAIL TYPE: ' + typeMap[document.getElementById('ec-type').value] + '
-TONE: ' + toneMap[document.getElementById('ec-tone').value] + '
-SITUATION: ' + ctx + '
-' + (points ? 'KEY POINTS TO INCLUDE: ' + points + '
-' : '') + (avoid ? 'THINGS TO AVOID: ' + avoid + '
-' : '') + '
-Rules:
-- Write a subject line first, then the email body
-- One clear purpose per email
-- No filler sentences or vague openers
-- Direct about what is needed or being delivered
-- Professional but human — sounds like a real person, not a template
-- Never make the client feel chased or pressured
-- End with a clear, specific next step or ask
-- Under 200 words for the body (unless a detailed report requires more)
-- Format: Subject: [subject line]
-
-[email body]';
+  var p = 'Write a client email for Amorette Digital Solutions.\n\nEMAIL TYPE: ' + typeMap[document.getElementById('ec-type').value] + '\nTONE: ' + toneMap[document.getElementById('ec-tone').value] + '\nSITUATION: ' + ctx + '\n' + (points ? 'KEY POINTS TO INCLUDE: ' + points + '\n' : '') + (avoid ? 'THINGS TO AVOID: ' + avoid + '\n' : '') + '\nRules:\n- Write a subject line first, then the email body\n- One clear purpose per email\n- No filler sentences or vague openers\n- Direct about what is needed or being delivered\n- Professional but human - sounds like a real person, not a template\n- Never make the client feel chased or pressured\n- End with a clear, specific next step or ask\n- Under 200 words for the body (unless a detailed report requires more)\n- Format: Subject: [subject line]\n\n[email body]';
   var btn = document.getElementById('btn-ec');
   var outEl = document.getElementById('out-ec');
   var resEl = document.getElementById('ec-res');
@@ -530,28 +475,10 @@ async function genColdEmail() {
   var ctx = document.getElementById('cold-context').value.trim();
   if (!ctx) { alert('Please tell me about this person first.'); return; }
   var whoMap = { coach:'a course creator or coach', agency:'an agency owner', biz:'a business owner', partner:'a potential partner or referrer' };
-  var goalMap = { convo:'Open a genuine conversation — no pitch, just a door', call:'Book a clarity or discovery call', qualify:'Explore whether there is a fit for Amorette services', partner:'Propose a partnership or white-label arrangement' };
-  var offerMap = { general:'Do not mention a specific offer yet — focus on the problem and open a conversation', arch:'The Architecture Phase ($400 — 8 deliverables, Week 1 mapping) is relevant for them', dfy:'DFY TCF (full Done-For-You AC Funnel build, starts at $10K) is relevant for them', cls:'Course Launch Shortcut (full ecosystem, starts at $5K) is relevant for them', white:'A white-label partnership where Amorette handles execution for their clients is relevant' };
+  var goalMap = { convo:'Open a genuine conversation - no pitch, just a door', call:'Book a clarity or discovery call', qualify:'Explore whether there is a fit for Amorette services', partner:'Propose a partnership or white-label arrangement' };
+  var offerMap = { general:'Do not mention a specific offer yet - focus on the problem and open a conversation', arch:'The Architecture Phase ($400 - 8 deliverables, Week 1 mapping) is relevant for them', dfy:'DFY TCF (full Done-For-You AC Funnel build, starts at $10K) is relevant for them', cls:'Course Launch Shortcut (full ecosystem, starts at $5K) is relevant for them', white:'A white-label partnership where Amorette handles execution for their clients is relevant' };
   var avoid = document.getElementById('cold-avoid').value.trim();
-  var p = 'Write a cold email for Amorette Digital Solutions.
-
-WHO: ' + whoMap[document.getElementById('cold-who').value] + '
-GOAL: ' + goalMap[document.getElementById('cold-goal').value] + '
-CONTEXT: ' + ctx + '
-OFFER CONTEXT: ' + offerMap[document.getElementById('cold-offer').value] + '
-' + (avoid ? 'NOTES: ' + avoid + '
-' : '') + '
-Rules:
-- Write a subject line first, then the email
-- Under 150 words for the body
-- Reference something REAL and SPECIFIC about this person from the context
-- No generic openers — no I hope this finds you well, no I came across your profile
-- No pitch in the first email unless the goal explicitly requires it
-- Sound like a real person who did their homework — not a bulk outreach template
-- One clear, low-pressure ask at the end
-- Format: Subject: [subject line]
-
-[email body]';
+  var p = 'Write a cold email for Amorette Digital Solutions.\n\nWHO: ' + whoMap[document.getElementById('cold-who').value] + '\nGOAL: ' + goalMap[document.getElementById('cold-goal').value] + '\nCONTEXT: ' + ctx + '\nOFFER CONTEXT: ' + offerMap[document.getElementById('cold-offer').value] + '\n' + (avoid ? 'NOTES: ' + avoid + '\n' : '') + '\nRules:\n- Write a subject line first, then the email\n- Under 150 words for the body\n- Reference something REAL and SPECIFIC about this person from the context\n- No generic openers - no I hope this finds you well, no I came across your profile\n- No pitch in the first email unless the goal explicitly requires it\n- Sound like a real person who did their homework - not a bulk outreach template\n- One clear, low-pressure ask at the end\n- Format: Subject: [subject line]\n\n[email body]';
   var btn = document.getElementById('btn-cold');
   var outEl = document.getElementById('out-cold');
   var resEl = document.getElementById('cold-res');
@@ -565,33 +492,8 @@ async function genHooks() {
   var topic = document.getElementById('hk-topic').value.trim();
   if (!topic) { alert('Please describe the topic first.'); return; }
   var audMap = { coaches:'service-led coaches and educators (integrity-driven, distrust hype)', agencies:'agency owners (scaling delivery, protecting reputation)', biz:'business owners who need stable funnel systems', all:'coaches, agency owners, and business owners' };
-  var platMap = { linkedin:'LinkedIn post opening (1-2 lines that stop the scroll)', email:'Email subject line (under 10 words, high open rate)', ad:'Ad hook (first 3-5 words that filter the right audience)', reel:'Reel or video script opening (first 5 seconds — pattern interrupt)' };
-  var p = 'Write 5 strong hooks for Amorette Digital Solutions.
-
-TOPIC: ' + topic + '
-AUDIENCE: ' + audMap[document.getElementById('hk-aud').value] + '
-PLATFORM FORMAT: ' + platMap[document.getElementById('hk-platform').value] + '
-
-For each hook, use a different formula:
-1. Challenge-assumption hook
-2. Specific number/cost hook
-3. Real client story/moment hook
-4. Without/even if structure hook
-5. Fear of inaction hook
-
-Rules:
-- Each hook must be specific to Amorette and this topic — not generic
-- Use real numbers from Amorette proof points where relevant ($400 architecture, $15K rebuilds, 8 deliverables, 30-40 pages)
-- Each hook should filter the right audience and repel the wrong one
-- No hype words, no generic motivation, no fake urgency
-- Short and specific — each hook under 20 words
-
-Format:
-1. [hook]
-2. [hook]
-3. [hook]
-4. [hook]
-5. [hook]';
+  var platMap = { linkedin:'LinkedIn post opening (1-2 lines that stop the scroll)', email:'Email subject line (under 10 words, high open rate)', ad:'Ad hook (first 3-5 words that filter the right audience)', reel:'Reel or video script opening (first 5 seconds - pattern interrupt)' };
+  var p = 'Write 5 strong hooks for Amorette Digital Solutions.\n\nTOPIC: ' + topic + '\nAUDIENCE: ' + audMap[document.getElementById('hk-aud').value] + '\nPLATFORM FORMAT: ' + platMap[document.getElementById('hk-platform').value] + '\n\nFor each hook, use a different formula:\n1. Challenge-assumption hook\n2. Specific number/cost hook\n3. Real client story/moment hook\n4. Without/even if structure hook\n5. Fear of inaction hook\n\nRules:\n- Each hook must be specific to Amorette and this topic - not generic\n- Use real numbers from Amorette proof points where relevant ($400 architecture, $15K rebuilds, 8 deliverables, 30-40 pages)\n- Each hook should filter the right audience and repel the wrong one\n- No hype words, no generic motivation, no fake urgency\n- Short and specific - each hook under 20 words\n\nFormat:\n1. [hook]\n2. [hook]\n3. [hook]\n4. [hook]\n5. [hook]';
   var btn = document.getElementById('btn-hk');
   var outEl = document.getElementById('out-hk');
   var resEl = document.getElementById('hk-res');
