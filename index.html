@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amorette — Content Studio</title>
+<title>Amorette Content Studio</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0d2a4c;--blue:#155596;--gold:#c08d20;--gold-lt:#d4a843;--bg:#ebf1f6;--white:#fff;--text:#0d2a4c;--soft:#2e4a6e;--muted:#6b88a8;--border:#c8d9ea;--bs:#dce8f0}
@@ -102,7 +102,6 @@ body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);
   <p>Trained on Amorette brand voice and strategy. Pick a task and generate copy that sounds real, not AI.</p>
 </div>
 <div class="main">
-
   <div class="screen active" id="s-dash">
     <div class="dh"><h2>What do you need today?</h2><p>Choose a task. Fill in the details. Get copy that is ready to post.</p></div>
     <div class="g3">
@@ -184,19 +183,15 @@ body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);
       </div>
     </div>
   </div>
-
 </div>
 <footer class="footer">Amorette Digital Solutions &middot; Internal use only &middot; Powered by Claude AI</footer>
 <script>
-var AKEY = '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';
-
 function goTo(s) {
   var all = document.querySelectorAll('.screen');
   for (var i = 0; i < all.length; i++) { all[i].classList.remove('active'); }
   var el = document.getElementById('s-' + s);
   if (el) { el.classList.add('active'); window.scrollTo(0,0); }
 }
-
 document.addEventListener('click', function(e) {
   var p = e.target.closest('.pi');
   if (!p) return;
@@ -206,69 +201,41 @@ document.addEventListener('click', function(e) {
   for (var i = 0; i < group.length; i++) { group[i].closest('.pi').classList.remove('on'); }
   p.classList.add('on');
 });
-
 function ld() { return '<div class="ld"><span></span><span></span><span></span></div>'; }
 function errH(e) { return '<div class="em">Error: ' + e.message + '</div>'; }
-
-var SP = 'You are the LinkedIn copywriter for Amorette Digital Solutions. Write copy that sounds like a real intelligent human - not AI, not a marketing template.\n\nABOUT AMORETTE: Strategic funnel architecture firm. We map complete funnel architecture BEFORE building in GoHighLevel so course creators do not waste $10K+ on rebuilds.\n\nWE ARE: Strategic architects who map BEFORE building. Funnel pathway designers who see the complete buyer journey. Implementation partners who prevent expensive rebuilds. GoHighLevel specialists.\nWE ARE NOT: Fast builders who build first fix later. Generic GHL template cloners. Tech VAs who just follow instructions.\n\nOFFERS:\nArchitecture Phase - $400. Week 1 mapping. 8 deliverables totaling 30-40 pages. Complete 12-24 month roadmap. Prevents $8K-$28K in rebuilds.\nThe 8 deliverables: Intake Questionnaire, Funnel Ascension Map, Messaging Guidelines, Organic Content Strategy, Full Back-End Setup Outline, Offer Research, Deep Market Research, Market Research and Audience Insights.\nTCF Execution Only - Ticket-based. $46/ticket. 33 tickets = full sales funnel (~$1,500). Pure execution no strategy.\nDFY TCF - Full AC Funnel build. Strategy plus research plus copy plus design plus build. Starts at $10,000.\nCourse Launch Shortcut - Full ecosystem: funnel plus automations plus course delivery. Starts at $5,000.\n\nPRIMARY AUDIENCE: Service-led coaches and educators. B2B. Teaching skills or income-generating capabilities. $1-3M/year. Serious about craft. Integrity over speed. Depth over reach.\nTheir real problem: Systems built piecemeal. Funnels that technically work but do not hold. Every launch feels heavier than it should.\nReal language: My emails are not sending. I keep rebuilding the same funnel. I have spent $15K and still do not have something stable.\n\nSECONDARY AUDIENCE: Agency owners. Scaling delivery without losing control. Need reliable execution. Protecting reputation.\n\nTRANSFORMATION:\nBEFORE: Guessing which offer to build first. Rebuilding every 6-9 months. Broken email handoffs. Chaotic launches. $15K-$28K in fixes.\nAFTER: Clear blueprint before a single page is built. Connected buyer pathway. Calm launches. Build once scale forever.\n\nCONTENT PILLARS:\nEducational (30%): 4-stage ascension model. Why sequence beats speed. Architecture vs building.\nProblem/Agitation (25%): emails not sending panic. $10K-$15K rebuild consequence. Broken handoffs. Fix-it-later trap.\nProcess Explanation (20%): The 8 deliverables. Week 1 mapping. How rebuilds get prevented.\nClient Proof (15%): Real scenarios. Cost comparisons. $15K-$28K rebuilds vs $400 architecture.\nPersonal Story (10%): Evolution from fast builder to strategic architect. Lessons from client rebuilds.\n\nHOOK FORMULAS:\nChallenge assumption: Why do we plan weddings for 12 months but build funnels in 2 weeks?\nStory: She wanted it built in 2 weeks. 6 months later she was rebuilding everything.\nConfession: I used to think architecture was overthinking. Then I watched a client spend $15K proving me wrong.\nNumber: $15000. That is what rebuilding costs when you skip the architecture phase.\n\nCTA PATTERNS - USE THESE ONLY:\nWhich deliverable would be most valuable for you right now?\nDM ARCHITECTURE if you are tired of rebuilding.\nHave you ever rebuilt something that could have been planned right the first time?\nWhat is the most expensive fix it later decision you have made?\n\nPOST STRUCTURE: Hook (1-2 lines) then Setup/Context then Story or Example then Lesson/Takeaway then CTA\n\nVOICE: Direct and confident. Educational not salesy. Real and honest not hyped. Professional but conversational. Use I and you. Share real examples with specific numbers.\n\nNEVER USE: unlock, unleash, game-changer, supercharge, level up, skyrocket, revolutionize, seamless, curated, robust, journey (generic)\nNEVER: fake urgency, shame language, pressure tactics, triple fragments, contrast formula (Not this. Not that. Just this.)\n\nFORMAT: 4-6 short paragraphs with blank line between each. 150-220 words total. Conversational CTA at end.';
-
 async function api(prompt) {
-  var r = await fetch('https://api.anthropic.com/v1/messages', {
+  var r = await fetch('/api/generate', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': AKEY,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-access': 'true'
-    },
-    body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1500, system: SP, messages: [{ role: 'user', content: prompt }] })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ prompt: prompt })
   });
   if (!r.ok) {
     var d = {};
     try { d = await r.json(); } catch(x) {}
-    throw new Error(d.error ? d.error.message : 'Error ' + r.status);
+    throw new Error(d.error || 'Error ' + r.status);
   }
   var data = await r.json();
-  return data.content.map(function(b) { return b.text || ''; }).join('');
+  return data.result || '';
 }
-
 async function genPost() {
   var topic = document.getElementById('pt').value.trim();
   if (!topic) { alert('Please describe what this post is about.'); return; }
-
   var aMap = { coaches:'service-led coaches and educators (B2B, teaching skills, integrity-driven)', agencies:'agency owners (scaling delivery, protecting reputation)', biz:'business owners who need stable funnel systems', all:'coaches, agency owners, and business owners' };
   var pMap = { edu:'PILLAR: Educational. Teach a concept - 4-stage ascension model, why sequence beats speed, how architecture differs from just building in GoHighLevel.', prob:'PILLAR: Problem/Agitation. Tell a real story about what goes wrong without architecture - emails not sending panic, the $10K-$15K rebuild consequence, broken handoffs during launches.', proc:'PILLAR: Process Explanation. Show what actually happens during the Architecture Phase - the 8 deliverables, the Week 1 mapping process, how the complete buyer journey gets mapped before anything is built.', proof:'PILLAR: Client Proof. Reference a real scenario - a course creator who rebuilt multiple times ($15K-$28K total) vs $400 architecture. Real outcomes. Do not use real client names.', pers:'PILLAR: Personal Story. Share the evolution from fast builder to strategic architect. A specific moment that changed the approach.' };
   var hMap = { assumption:'HOOK: Challenge-assumption. Example: Why do we plan weddings for 12 months but build funnels in 2 weeks?', story:'HOOK: Real client story. One specific painful moment. Example: She wanted it built in 2 weeks. 6 months later she was rebuilding everything.', confession:'HOOK: Personal confession. Example: I used to think architecture was overthinking. Then I watched a client spend $15K proving me wrong.', number:'HOOK: Specific number. Example: $15000. That is what rebuilding costs when you skip the architecture phase.', question:'HOOK: Provocative question that names the exact situation the audience is already in.' };
   var angMap = { arch_speed:'ANGLE: Architecture beats speed. Planning before touching GoHighLevel prevents the $10K-$28K rebuild cycle.', map_first:'ANGLE: Map before build. The complete buyer journey must be visible before a single page is created.', rebuild:'ANGLE: Every rebuild traces back to missing architecture. Always predictable and preventable.', cost:'ANGLE: $400 in architecture saves $10K-$28K in rebuilds. The math is impossible to ignore.', integrated:'ANGLE: A funnel that is not integrated is not done. The handoffs are where revenue leaks.', dfy_own:'ANGLE: Real done-for-you means owning the outcome end-to-end.' };
   var oMap = { none:'OFFER: Pure value post. Do not mention any specific offer.', arch:'OFFER: Near the end naturally reference the Architecture Phase ($400, 8 deliverables in Week 1, 30-40 pages of documentation).', exec:'OFFER: Near the end reference TCF Execution Only (ticket-based build, starts around $1500).', dfy:'OFFER: Near the end reference DFY TCF (full Done-For-You AC Funnel build, starts at $10K).', cls:'OFFER: Near the end reference Course Launch Shortcut (full ecosystem, starts at $5K).' };
   var obMap = { none:'', later:'ADDRESS THIS OBJECTION: Cannot I just fix it later', whypay:'ADDRESS THIS OBJECTION: Why pay for architecture when I can just start building', what400:'ADDRESS THIS OBJECTION: What exactly do I get for $400', notime:'ADDRESS THIS OBJECTION: I do not have time to create more offers', onecourse:'ADDRESS THIS OBJECTION: I just want one aligned course' };
-
   var ang = document.querySelector('input[name="ang"]:checked');
   var angVal = ang ? ang.value : 'arch_speed';
   var obj = document.getElementById('pobj').value;
   var proof = document.getElementById('ppr').value.trim();
-
-  var p = 'Write 2 LinkedIn post VARIANTS for Amorette Digital Solutions.\n\n'
-    + 'POST TOPIC: ' + topic + '\n'
-    + 'AUDIENCE: ' + aMap[document.getElementById('pa').value] + '\n'
-    + pMap[document.getElementById('pp').value] + '\n'
-    + hMap[document.getElementById('ph').value] + '\n'
-    + angMap[angVal] + '\n'
-    + oMap[document.getElementById('po').value] + '\n'
-    + (obMap[obj] ? obMap[obj] + '\n' : '')
-    + (proof ? 'SPECIFIC DETAIL: ' + proof + '\n' : '')
-    + '\nPost structure: Hook then Setup then Story or Example then Lesson then CTA\n'
-    + '4-6 short paragraphs, blank line between each. 150-220 words per variant.\n'
-    + 'End with one of these CTAs: Which deliverable would be most valuable for you right now? OR DM ARCHITECTURE if you are tired of rebuilding.\n'
-    + '\nFormat EXACTLY:\nVARIANT A:\n[post]\n---\nVARIANT B:\n[post]';
-
+  var p = 'Write 2 LinkedIn post VARIANTS for Amorette Digital Solutions.\n\nPOST TOPIC: ' + topic + '\nAUDIENCE: ' + aMap[document.getElementById('pa').value] + '\n' + pMap[document.getElementById('pp').value] + '\n' + hMap[document.getElementById('ph').value] + '\n' + angMap[angVal] + '\n' + oMap[document.getElementById('po').value] + '\n' + (obMap[obj] ? obMap[obj] + '\n' : '') + (proof ? 'SPECIFIC DETAIL: ' + proof + '\n' : '') + '\nPost structure: Hook then Setup then Story or Example then Lesson then CTA\n4-6 short paragraphs, blank line between each. 150-220 words per variant.\nEnd with one of these CTAs: Which deliverable would be most valuable for you right now? OR DM ARCHITECTURE if you are tired of rebuilding.\n\nFormat EXACTLY:\nVARIANT A:\n[post]\n---\nVARIANT B:\n[post]';
   var btn = document.getElementById('btn-post');
   var outEl = document.getElementById('out-post');
   var varEl = document.getElementById('var-post');
   btn.disabled = true; btn.textContent = 'Generating...';
-  outEl.classList.add('on');
-  varEl.innerHTML = ld();
-
+  outEl.classList.add('on'); varEl.innerHTML = ld();
   try {
     var text = await api(p);
     var parts = text.split(/\n---+\n/).map(function(s) { return s.trim(); }).filter(Boolean);
@@ -284,14 +251,12 @@ async function genPost() {
       cpBtn.onclick = function() { doCp(cleanCopy, cpBtn); };
       head.appendChild(tag); head.appendChild(cpBtn);
       var body = document.createElement('div'); body.className = 'vb'; body.textContent = clean;
-      card.appendChild(head); card.appendChild(body);
-      varEl.appendChild(card);
+      card.appendChild(head); card.appendChild(body); varEl.appendChild(card);
     });
     if (!parts.length) { varEl.innerHTML = '<div class="ob">' + text + '</div>'; }
   } catch(e) { varEl.innerHTML = errH(e); }
   btn.disabled = false; btn.textContent = 'Generate LinkedIn Post';
 }
-
 async function genComment() {
   var orig = document.getElementById('co').value.trim();
   if (!orig) { alert('Please paste the post or comment you want to reply to.'); return; }
@@ -300,7 +265,6 @@ async function genComment() {
   var intent = intEl ? intEl.value : 'value';
   var pt = document.getElementById('cpt').value.trim();
   var p = 'Write a LinkedIn comment reply for Amorette Digital Solutions.\n\nORIGINAL:\n' + orig + '\n\nINTENT: ' + iMap[intent] + '\n' + (pt ? 'SPECIFIC POINT: ' + pt + '\n' : '') + '\nRules: 2-4 sentences. Under 80 words. Do NOT start with Great post or Love this. Start with a real specific thought. Sound like a real expert.';
-
   var btn = document.getElementById('btn-cm');
   var outEl = document.getElementById('out-cm');
   var resEl = document.getElementById('cm-res');
@@ -309,7 +273,6 @@ async function genComment() {
   try { resEl.textContent = await api(p); } catch(e) { resEl.innerHTML = errH(e); }
   btn.disabled = false; btn.textContent = 'Generate Comment Reply';
 }
-
 async function genDM() {
   var ctx = document.getElementById('dc').value.trim();
   if (!ctx) { alert('Please tell me about this person first.'); return; }
@@ -317,7 +280,6 @@ async function genDM() {
   var gMap = { convo:'Start a genuine low-pressure conversation. No pitch.', qualify:'Gently explore whether they have the funnel situation Amorette solves.', call:'Invite to a clarity call. Specific, calm, no pressure.', followup:'Follow up after a specific previous interaction. Reference it naturally.' };
   var notes = document.getElementById('dn').value.trim();
   var p = 'Write a LinkedIn DM for Amorette Digital Solutions.\n\nWHO: ' + wMap[document.getElementById('dw').value] + '\nGOAL: ' + gMap[document.getElementById('dg').value] + '\nCONTEXT: ' + ctx + '\n' + (notes ? 'NOTES: ' + notes + '\n' : '') + '\nRules: 3-5 sentences. Under 100 words. Reference something REAL and SPECIFIC from the context. No generic openers. No pitch unless goal is call invite. Calm and direct. End with one low-pressure question or next step.';
-
   var btn = document.getElementById('btn-dm');
   var outEl = document.getElementById('out-dm');
   var resEl = document.getElementById('dm-res');
@@ -326,7 +288,6 @@ async function genDM() {
   try { resEl.textContent = await api(p); } catch(e) { resEl.innerHTML = errH(e); }
   btn.disabled = false; btn.textContent = 'Generate DM';
 }
-
 function cpEl(id, btn) { doCp(document.getElementById(id).textContent, btn); }
 function doCp(text, btn) {
   navigator.clipboard.writeText(text).then(function() {
