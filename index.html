@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amorette Content Studio</title>
+<title>Amorette — Content Studio</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0d2a4c;--blue:#155596;--gold:#c08d20;--gold-lt:#d4a843;--gold-pale:#fdf6e8;--bg:#ebf1f6;--white:#fff;--text:#0d2a4c;--soft:#2e4a6e;--muted:#6b88a8;--border:#c8d9ea;--bs:#dce8f0}
+:root{--navy:#0d2a4c;--blue:#155596;--gold:#c08d20;--gold-lt:#d4a843;--bg:#ebf1f6;--white:#fff;--text:#0d2a4c;--soft:#2e4a6e;--muted:#6b88a8;--border:#c8d9ea;--bs:#dce8f0}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);font-weight:300;line-height:1.6;min-height:100vh}
 .hdr{background:var(--navy);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.3)}
@@ -15,8 +15,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);
 .bn{font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff;display:block}
 .bs2{font-size:7.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-lt);display:block}
 .bdg{background:rgba(192,141,32,.15);border:1px solid rgba(192,141,32,.4);color:var(--gold-lt);font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:100px}
-.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--blue) 100%);padding:56px 40px 52px;text-align:center;position:relative;overflow:hidden}
-.hero:before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(192,141,32,.18) 0%,transparent 65%);pointer-events:none}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--blue) 100%);padding:56px 40px 52px;text-align:center}
 .eye{font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:#fff;margin-bottom:14px}
 .hero p{font-size:14px;font-weight:300;color:rgba(235,241,246,.78);max-width:480px;margin:0 auto;line-height:1.75}
@@ -31,12 +30,12 @@ body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);
 .tc:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(13,42,76,.12);transform:translateY(-3px)}
 .tc:hover::before{opacity:1}
 .tc.soon{opacity:.5;cursor:default;pointer-events:none}
-.ti{width:52px;height:52px;background:var(--gold-pale);border:1.5px solid rgba(192,141,32,.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 16px}
+.ti{width:52px;height:52px;background:#fdf6e8;border:1.5px solid rgba(192,141,32,.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 16px}
 .tt{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--navy);margin-bottom:8px}
 .td{font-size:12px;color:var(--muted);line-height:1.6;font-weight:300}
 .ta{display:inline-flex;margin-top:16px;font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
 .sb{position:absolute;top:12px;right:12px;background:var(--bg);border:1px solid var(--border);color:var(--muted);font-size:8.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px}
-.tn{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.tnav{display:flex;align-items:center;gap:12px;margin-bottom:28px}
 .bk{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);cursor:pointer;background:none;border:1.5px solid var(--border);border-radius:8px;padding:7px 14px;transition:all .2s;font-family:'Montserrat',sans-serif}
 .bk:hover{color:var(--navy);border-color:var(--navy);background:var(--white)}
 .bc2{font-size:12px;color:var(--muted);font-weight:300}
@@ -71,7 +70,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);
 .cb{font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:none;border:1.5px solid var(--border);border-radius:6px;padding:5px 13px;cursor:pointer;transition:all .2s}
 .cb:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
 .ob{background:var(--white);border:1.5px solid var(--bs);border-radius:12px;padding:20px 22px;font-size:13.5px;line-height:1.85;color:var(--soft);white-space:pre-wrap;word-break:break-word}
-.ph2{color:var(--muted);font-style:italic;font-size:12px}
+.ph{color:var(--muted);font-style:italic;font-size:12px}
 .vw{display:flex;flex-direction:column;gap:14px}
 .vc{background:var(--white);border:1.5px solid var(--bs);border-radius:12px;overflow:hidden}
 .vh{display:flex;align-items:center;justify-content:space-between;padding:10px 18px;background:var(--navy)}
@@ -103,12 +102,13 @@ body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);
   <p>Trained on Amorette brand voice and strategy. Pick a task and generate copy that sounds real, not AI.</p>
 </div>
 <div class="main">
+
   <div class="screen active" id="s-dash">
-    <div class="dh"><h2>What do you need today?</h2><p>Choose a task below. Fill in the details. Get copy that is ready to post.</p></div>
+    <div class="dh"><h2>What do you need today?</h2><p>Choose a task. Fill in the details. Get copy that is ready to post.</p></div>
     <div class="g3">
-      <div class="tc" id="card-post" onclick="goTo('post')"><div class="ti">&#10022;</div><div class="tt">LinkedIn Post</div><div class="td">Generate a post caption. Educational, story-based, proof, or personal. Two variants every time.</div><div class="ta">Create post &#8594;</div></div>
-      <div class="tc" id="card-comment" onclick="goTo('comment')"><div class="ti">&#8617;</div><div class="tt">Comment Reply</div><div class="td">Paste any LinkedIn post or comment. Get a reply that adds value, starts a conversation, or positions Amorette.</div><div class="ta">Write reply &#8594;</div></div>
-      <div class="tc" id="card-dm" onclick="goTo('dm')"><div class="ti">&#9993;</div><div class="tt">DM / Message</div><div class="td">Describe who you are reaching out to and why. Get a human message that actually starts conversations.</div><div class="ta">Write DM &#8594;</div></div>
+      <div class="tc" onclick="goTo('post')"><div class="ti">&#10022;</div><div class="tt">LinkedIn Post</div><div class="td">Generate a post caption. Educational, story-based, proof, or personal. Two variants every time.</div><div class="ta">Create post &#8594;</div></div>
+      <div class="tc" onclick="goTo('comment')"><div class="ti">&#8617;</div><div class="tt">Comment Reply</div><div class="td">Paste any LinkedIn post or comment. Get a reply that adds value, starts a conversation, or positions Amorette.</div><div class="ta">Write reply &#8594;</div></div>
+      <div class="tc" onclick="goTo('dm')"><div class="ti">&#9993;</div><div class="tt">DM / Message</div><div class="td">Describe who you are reaching out to and why. Get a human message that actually starts conversations.</div><div class="ta">Write DM &#8594;</div></div>
     </div>
     <div class="g3">
       <div class="tc soon"><div class="sb">Coming soon</div><div class="ti">&#128231;</div><div class="tt">Email Copy</div><div class="td">Nurture sequences, follow-ups, and launch emails.</div></div>
@@ -118,7 +118,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);
   </div>
 
   <div class="screen" id="s-post">
-    <div class="tn"><button class="bk" onclick="goTo('dash')">&#8592; Back</button><span class="bc2">Dashboard &#8250; <span>LinkedIn Post</span></span></div>
+    <div class="tnav"><button class="bk" onclick="goTo('dash')">&#8592; Back</button><span class="bc2">Dashboard &#8250; <span>LinkedIn Post</span></span></div>
     <div class="fc">
       <div class="fh"><div class="fhi">&#10022;</div><div><div class="fht">LinkedIn Post Generator</div><div class="fhs">Fill in the brief. Two variants will be generated.</div></div></div>
       <div class="fb">
@@ -150,7 +150,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);
   </div>
 
   <div class="screen" id="s-comment">
-    <div class="tn"><button class="bk" onclick="goTo('dash')">&#8592; Back</button><span class="bc2">Dashboard &#8250; <span>Comment Reply</span></span></div>
+    <div class="tnav"><button class="bk" onclick="goTo('dash')">&#8592; Back</button><span class="bc2">Dashboard &#8250; <span>Comment Reply</span></span></div>
     <div class="fc">
       <div class="fh"><div class="fhi">&#8617;</div><div><div class="fht">Comment Reply Generator</div><div class="fhs">Paste the post or comment. Pick your intent. Get a reply that sounds real.</div></div></div>
       <div class="fb">
@@ -163,13 +163,13 @@ body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);
         </div></div></div>
         <div class="fr one"><div class="fg"><label class="fl">Specific point you want to make <span class="fhi2">(optional)</span></label><input class="fi" type="text" id="cpt" placeholder="e.g. The broken handoff between opt-in and email is almost always the real issue"></div></div>
         <button class="gb" id="btn-cm" onclick="genComment()">Generate Comment Reply</button>
-        <div class="out" id="out-cm"><div class="or"><span class="ol">Generated Reply</span><button class="cb" onclick="cpEl('cm-res',this)">Copy</button></div><div class="ob" id="cm-res"><span class="ph2">Your reply will appear here.</span></div></div>
+        <div class="out" id="out-cm"><div class="or"><span class="ol">Generated Reply</span><button class="cb" onclick="cpEl('cm-res',this)">Copy</button></div><div class="ob" id="cm-res"><span class="ph">Your reply will appear here.</span></div></div>
       </div>
     </div>
   </div>
 
   <div class="screen" id="s-dm">
-    <div class="tn"><button class="bk" onclick="goTo('dash')">&#8592; Back</button><span class="bc2">Dashboard &#8250; <span>DM / Message</span></span></div>
+    <div class="tnav"><button class="bk" onclick="goTo('dash')">&#8592; Back</button><span class="bc2">Dashboard &#8250; <span>DM / Message</span></span></div>
     <div class="fc">
       <div class="fh"><div class="fhi">&#9993;</div><div><div class="fht">DM / Message Generator</div><div class="fhs">Describe the person and the goal. Get a message that feels human.</div></div></div>
       <div class="fb">
@@ -180,7 +180,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);
         <div class="fr one"><div class="fg"><label class="fl">Tell me about this person <span class="fhi2">more context = more personal message</span></label><textarea class="fta" id="dc" placeholder="e.g. Course creator. Commented on rebuild post. Relaunched twice in 12 months. Sells coaching program on mindset." rows="3"></textarea></div></div>
         <div class="fr one"><div class="fg"><label class="fl">Anything to mention or avoid <span class="fhi2">(optional)</span></label><input class="fi" type="text" id="dn" placeholder="e.g. Do not pitch yet. They worked with agencies before and got burned."></div></div>
         <button class="gb" id="btn-dm" onclick="genDM()">Generate DM</button>
-        <div class="out" id="out-dm"><div class="or"><span class="ol">Generated Message</span><button class="cb" onclick="cpEl('dm-res',this)">Copy</button></div><div class="ob" id="dm-res"><span class="ph2">Your message will appear here.</span></div></div>
+        <div class="out" id="out-dm"><div class="or"><span class="ol">Generated Message</span><button class="cb" onclick="cpEl('dm-res',this)">Copy</button></div><div class="ob" id="dm-res"><span class="ph">Your message will appear here.</span></div></div>
       </div>
     </div>
   </div>
@@ -188,6 +188,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);
 </div>
 <footer class="footer">Amorette Digital Solutions &middot; Internal use only &middot; Powered by Claude AI</footer>
 <script>
+var AKEY = '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';
+
 function goTo(s) {
   var all = document.querySelectorAll('.screen');
   for (var i = 0; i < all.length; i++) { all[i].classList.remove('active'); }
@@ -206,21 +208,28 @@ document.addEventListener('click', function(e) {
 });
 
 function ld() { return '<div class="ld"><span></span><span></span><span></span></div>'; }
-function err(e) { return '<div class="em">Error: ' + e.message + '</div>'; }
+function errH(e) { return '<div class="em">Error: ' + e.message + '</div>'; }
+
+var SP = 'You are the LinkedIn copywriter for Amorette Digital Solutions. Write copy that sounds like a real intelligent human - not AI, not a marketing template.\n\nABOUT AMORETTE: Strategic funnel architecture firm. We map complete funnel architecture BEFORE building in GoHighLevel so course creators do not waste $10K+ on rebuilds.\n\nWE ARE: Strategic architects who map BEFORE building. Funnel pathway designers who see the complete buyer journey. Implementation partners who prevent expensive rebuilds. GoHighLevel specialists.\nWE ARE NOT: Fast builders who build first fix later. Generic GHL template cloners. Tech VAs who just follow instructions.\n\nOFFERS:\nArchitecture Phase - $400. Week 1 mapping. 8 deliverables totaling 30-40 pages. Complete 12-24 month roadmap. Prevents $8K-$28K in rebuilds.\nThe 8 deliverables: Intake Questionnaire, Funnel Ascension Map, Messaging Guidelines, Organic Content Strategy, Full Back-End Setup Outline, Offer Research, Deep Market Research, Market Research and Audience Insights.\nTCF Execution Only - Ticket-based. $46/ticket. 33 tickets = full sales funnel (~$1,500). Pure execution no strategy.\nDFY TCF - Full AC Funnel build. Strategy plus research plus copy plus design plus build. Starts at $10,000.\nCourse Launch Shortcut - Full ecosystem: funnel plus automations plus course delivery. Starts at $5,000.\n\nPRIMARY AUDIENCE: Service-led coaches and educators. B2B. Teaching skills or income-generating capabilities. $1-3M/year. Serious about craft. Integrity over speed. Depth over reach.\nTheir real problem: Systems built piecemeal. Funnels that technically work but do not hold. Every launch feels heavier than it should.\nReal language: My emails are not sending. I keep rebuilding the same funnel. I have spent $15K and still do not have something stable.\n\nSECONDARY AUDIENCE: Agency owners. Scaling delivery without losing control. Need reliable execution. Protecting reputation.\n\nTRANSFORMATION:\nBEFORE: Guessing which offer to build first. Rebuilding every 6-9 months. Broken email handoffs. Chaotic launches. $15K-$28K in fixes.\nAFTER: Clear blueprint before a single page is built. Connected buyer pathway. Calm launches. Build once scale forever.\n\nCONTENT PILLARS:\nEducational (30%): 4-stage ascension model. Why sequence beats speed. Architecture vs building.\nProblem/Agitation (25%): emails not sending panic. $10K-$15K rebuild consequence. Broken handoffs. Fix-it-later trap.\nProcess Explanation (20%): The 8 deliverables. Week 1 mapping. How rebuilds get prevented.\nClient Proof (15%): Real scenarios. Cost comparisons. $15K-$28K rebuilds vs $400 architecture.\nPersonal Story (10%): Evolution from fast builder to strategic architect. Lessons from client rebuilds.\n\nHOOK FORMULAS:\nChallenge assumption: Why do we plan weddings for 12 months but build funnels in 2 weeks?\nStory: She wanted it built in 2 weeks. 6 months later she was rebuilding everything.\nConfession: I used to think architecture was overthinking. Then I watched a client spend $15K proving me wrong.\nNumber: $15000. That is what rebuilding costs when you skip the architecture phase.\n\nCTA PATTERNS - USE THESE ONLY:\nWhich deliverable would be most valuable for you right now?\nDM ARCHITECTURE if you are tired of rebuilding.\nHave you ever rebuilt something that could have been planned right the first time?\nWhat is the most expensive fix it later decision you have made?\n\nPOST STRUCTURE: Hook (1-2 lines) then Setup/Context then Story or Example then Lesson/Takeaway then CTA\n\nVOICE: Direct and confident. Educational not salesy. Real and honest not hyped. Professional but conversational. Use I and you. Share real examples with specific numbers.\n\nNEVER USE: unlock, unleash, game-changer, supercharge, level up, skyrocket, revolutionize, seamless, curated, robust, journey (generic)\nNEVER: fake urgency, shame language, pressure tactics, triple fragments, contrast formula (Not this. Not that. Just this.)\n\nFORMAT: 4-6 short paragraphs with blank line between each. 150-220 words total. Conversational CTA at end.';
 
 async function api(prompt) {
-  var r = await fetch('/api/generate', {
+  var r = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ prompt: prompt })
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': AKEY,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1500, system: SP, messages: [{ role: 'user', content: prompt }] })
   });
   if (!r.ok) {
     var d = {};
     try { d = await r.json(); } catch(x) {}
-    throw new Error(d.error || 'Error ' + r.status);
+    throw new Error(d.error ? d.error.message : 'Error ' + r.status);
   }
   var data = await r.json();
-  return data.result || '';
+  return data.content.map(function(b) { return b.text || ''; }).join('');
 }
 
 async function genPost() {
@@ -228,10 +237,10 @@ async function genPost() {
   if (!topic) { alert('Please describe what this post is about.'); return; }
 
   var aMap = { coaches:'service-led coaches and educators (B2B, teaching skills, integrity-driven)', agencies:'agency owners (scaling delivery, protecting reputation)', biz:'business owners who need stable funnel systems', all:'coaches, agency owners, and business owners' };
-  var pMap = { edu:'PILLAR: Educational. Teach a concept - 4-stage ascension model, why sequence beats speed, how architecture differs from just building in GoHighLevel.', prob:'PILLAR: Problem/Agitation. Tell a real story about what goes wrong without architecture - emails not sending panic, the $10K-$15K rebuild consequence, broken handoffs during launches.', proc:'PILLAR: Process Explanation. Show what happens during the Architecture Phase - the 8 deliverables, Week 1 mapping, how the complete buyer journey gets mapped before anything is built.', proof:'PILLAR: Client Proof. Reference a real scenario - a course creator who rebuilt multiple times versus $400 architecture. Do not use real client names.', pers:'PILLAR: Personal Story. Share the evolution from fast builder to strategic architect. A specific moment that changed the approach.' };
+  var pMap = { edu:'PILLAR: Educational. Teach a concept - 4-stage ascension model, why sequence beats speed, how architecture differs from just building in GoHighLevel.', prob:'PILLAR: Problem/Agitation. Tell a real story about what goes wrong without architecture - emails not sending panic, the $10K-$15K rebuild consequence, broken handoffs during launches.', proc:'PILLAR: Process Explanation. Show what actually happens during the Architecture Phase - the 8 deliverables, the Week 1 mapping process, how the complete buyer journey gets mapped before anything is built.', proof:'PILLAR: Client Proof. Reference a real scenario - a course creator who rebuilt multiple times ($15K-$28K total) vs $400 architecture. Real outcomes. Do not use real client names.', pers:'PILLAR: Personal Story. Share the evolution from fast builder to strategic architect. A specific moment that changed the approach.' };
   var hMap = { assumption:'HOOK: Challenge-assumption. Example: Why do we plan weddings for 12 months but build funnels in 2 weeks?', story:'HOOK: Real client story. One specific painful moment. Example: She wanted it built in 2 weeks. 6 months later she was rebuilding everything.', confession:'HOOK: Personal confession. Example: I used to think architecture was overthinking. Then I watched a client spend $15K proving me wrong.', number:'HOOK: Specific number. Example: $15000. That is what rebuilding costs when you skip the architecture phase.', question:'HOOK: Provocative question that names the exact situation the audience is already in.' };
-  var angMap = { arch_speed:'ANGLE: Architecture beats speed. Planning before touching GoHighLevel prevents the $10K-$28K rebuild cycle.', map_first:'ANGLE: Map before build. The complete buyer journey must be visible before a single page is created.', rebuild:'ANGLE: Every rebuild traces back to missing architecture. Always predictable and preventable.', cost:'ANGLE: $400 in architecture saves $10K-$28K in rebuilds. The math is impossible to ignore.', integrated:'ANGLE: A funnel that is not integrated is not done. The handoffs are where revenue leaks.', dfy_own:'ANGLE: Real done-for-you means owning the outcome end-to-end, not just completing tasks.' };
-  var oMap = { none:'OFFER: Pure value post. Do not mention any specific offer.', arch:'OFFER: Near the end naturally reference the Architecture Phase ($400, 8 deliverables in Week 1, 30-40 pages of documentation).', exec:'OFFER: Near the end reference TCF Execution Only (ticket-based build, starts around $1500 for a full funnel).', dfy:'OFFER: Near the end reference DFY TCF (full Done-For-You AC Funnel build, starts at $10K).', cls:'OFFER: Near the end reference Course Launch Shortcut (full ecosystem, starts at $5K).' };
+  var angMap = { arch_speed:'ANGLE: Architecture beats speed. Planning before touching GoHighLevel prevents the $10K-$28K rebuild cycle.', map_first:'ANGLE: Map before build. The complete buyer journey must be visible before a single page is created.', rebuild:'ANGLE: Every rebuild traces back to missing architecture. Always predictable and preventable.', cost:'ANGLE: $400 in architecture saves $10K-$28K in rebuilds. The math is impossible to ignore.', integrated:'ANGLE: A funnel that is not integrated is not done. The handoffs are where revenue leaks.', dfy_own:'ANGLE: Real done-for-you means owning the outcome end-to-end.' };
+  var oMap = { none:'OFFER: Pure value post. Do not mention any specific offer.', arch:'OFFER: Near the end naturally reference the Architecture Phase ($400, 8 deliverables in Week 1, 30-40 pages of documentation).', exec:'OFFER: Near the end reference TCF Execution Only (ticket-based build, starts around $1500).', dfy:'OFFER: Near the end reference DFY TCF (full Done-For-You AC Funnel build, starts at $10K).', cls:'OFFER: Near the end reference Course Launch Shortcut (full ecosystem, starts at $5K).' };
   var obMap = { none:'', later:'ADDRESS THIS OBJECTION: Cannot I just fix it later', whypay:'ADDRESS THIS OBJECTION: Why pay for architecture when I can just start building', what400:'ADDRESS THIS OBJECTION: What exactly do I get for $400', notime:'ADDRESS THIS OBJECTION: I do not have time to create more offers', onecourse:'ADDRESS THIS OBJECTION: I just want one aligned course' };
 
   var ang = document.querySelector('input[name="ang"]:checked');
@@ -239,39 +248,19 @@ async function genPost() {
   var obj = document.getElementById('pobj').value;
   var proof = document.getElementById('ppr').value.trim();
 
-  var p = 'Write 2 LinkedIn post VARIANTS for Amorette Digital Solutions.
-
-'
-    + 'POST TOPIC: ' + topic + '
-'
-    + 'AUDIENCE: ' + aMap[document.getElementById('pa').value] + '
-'
-    + pMap[document.getElementById('pp').value] + '
-'
-    + hMap[document.getElementById('ph').value] + '
-'
-    + angMap[angVal] + '
-'
-    + oMap[document.getElementById('po').value] + '
-'
-    + (obMap[obj] ? obMap[obj] + '
-' : '')
-    + (proof ? 'SPECIFIC DETAIL: ' + proof + '
-' : '')
-    + '
-Post structure: Hook then Setup then Story or Example then Lesson then CTA
-'
-    + '4-6 short paragraphs, blank line between each. 150-220 words per variant.
-'
-    + 'End with one of these CTAs: Which deliverable would be most valuable for you right now? OR DM ARCHITECTURE if you are tired of rebuilding.
-'
-    + '
-Format EXACTLY:
-VARIANT A:
-[post]
----
-VARIANT B:
-[post]';
+  var p = 'Write 2 LinkedIn post VARIANTS for Amorette Digital Solutions.\n\n'
+    + 'POST TOPIC: ' + topic + '\n'
+    + 'AUDIENCE: ' + aMap[document.getElementById('pa').value] + '\n'
+    + pMap[document.getElementById('pp').value] + '\n'
+    + hMap[document.getElementById('ph').value] + '\n'
+    + angMap[angVal] + '\n'
+    + oMap[document.getElementById('po').value] + '\n'
+    + (obMap[obj] ? obMap[obj] + '\n' : '')
+    + (proof ? 'SPECIFIC DETAIL: ' + proof + '\n' : '')
+    + '\nPost structure: Hook then Setup then Story or Example then Lesson then CTA\n'
+    + '4-6 short paragraphs, blank line between each. 150-220 words per variant.\n'
+    + 'End with one of these CTAs: Which deliverable would be most valuable for you right now? OR DM ARCHITECTURE if you are tired of rebuilding.\n'
+    + '\nFormat EXACTLY:\nVARIANT A:\n[post]\n---\nVARIANT B:\n[post]';
 
   var btn = document.getElementById('btn-post');
   var outEl = document.getElementById('out-post');
@@ -282,9 +271,7 @@ VARIANT B:
 
   try {
     var text = await api(p);
-    var parts = text.split(/
----+
-/).map(function(s) { return s.trim(); }).filter(Boolean);
+    var parts = text.split(/\n---+\n/).map(function(s) { return s.trim(); }).filter(Boolean);
     varEl.innerHTML = '';
     parts.forEach(function(part, i) {
       var clean = part.replace(/^VARIANT [AB]:\s*/i, '').trim();
@@ -301,33 +288,25 @@ VARIANT B:
       varEl.appendChild(card);
     });
     if (!parts.length) { varEl.innerHTML = '<div class="ob">' + text + '</div>'; }
-  } catch(e) { varEl.innerHTML = err(e); }
+  } catch(e) { varEl.innerHTML = errH(e); }
   btn.disabled = false; btn.textContent = 'Generate LinkedIn Post';
 }
 
 async function genComment() {
   var orig = document.getElementById('co').value.trim();
   if (!orig) { alert('Please paste the post or comment you want to reply to.'); return; }
-  var iMap = { value:'Add a specific genuinely useful insight. Name a root cause or reframe something. Not generic validation.', convo:'Start a real conversation. Respond to the human experience in what they wrote. One genuine question. No agenda.', position:'Subtly show the architecture-first approach. Name the real root cause so the value of mapping before building is obvious without pitching.', cta:'Offer a gentle natural next step. Reference something specific from their post. Calm and human.' };
+  var iMap = { value:'Add a specific genuinely useful insight. Name a root cause or reframe something. Not generic validation.', convo:'Start a real conversation. One genuine question. No agenda.', position:'Subtly show the architecture-first approach. Name the real root cause so the value of mapping before building is obvious without pitching.', cta:'Offer a gentle natural next step. Reference something specific from their post. Calm and human.' };
   var intEl = document.querySelector('input[name="ci"]:checked');
   var intent = intEl ? intEl.value : 'value';
   var pt = document.getElementById('cpt').value.trim();
-  var p = 'Write a LinkedIn comment reply for Amorette Digital Solutions.
-
-ORIGINAL:
-' + orig + '
-
-INTENT: ' + iMap[intent] + '
-' + (pt ? 'SPECIFIC POINT: ' + pt + '
-' : '') + '
-Rules: 2-4 sentences. Under 80 words. Do NOT start with Great post or Love this. Start with a real specific thought. Sound like a real expert.';
+  var p = 'Write a LinkedIn comment reply for Amorette Digital Solutions.\n\nORIGINAL:\n' + orig + '\n\nINTENT: ' + iMap[intent] + '\n' + (pt ? 'SPECIFIC POINT: ' + pt + '\n' : '') + '\nRules: 2-4 sentences. Under 80 words. Do NOT start with Great post or Love this. Start with a real specific thought. Sound like a real expert.';
 
   var btn = document.getElementById('btn-cm');
   var outEl = document.getElementById('out-cm');
   var resEl = document.getElementById('cm-res');
   btn.disabled = true; btn.textContent = 'Generating...';
   outEl.classList.add('on'); resEl.innerHTML = ld();
-  try { resEl.textContent = await api(p); } catch(e) { resEl.innerHTML = err(e); }
+  try { resEl.textContent = await api(p); } catch(e) { resEl.innerHTML = errH(e); }
   btn.disabled = false; btn.textContent = 'Generate Comment Reply';
 }
 
@@ -337,21 +316,14 @@ async function genDM() {
   var wMap = { warm:'a warm lead who engaged with Amorette content', cold:'cold outreach with no prior contact', follower:'someone who follows Amorette', referral:'someone referred by a mutual connection' };
   var gMap = { convo:'Start a genuine low-pressure conversation. No pitch.', qualify:'Gently explore whether they have the funnel situation Amorette solves.', call:'Invite to a clarity call. Specific, calm, no pressure.', followup:'Follow up after a specific previous interaction. Reference it naturally.' };
   var notes = document.getElementById('dn').value.trim();
-  var p = 'Write a LinkedIn DM for Amorette Digital Solutions.
-
-WHO: ' + wMap[document.getElementById('dw').value] + '
-GOAL: ' + gMap[document.getElementById('dg').value] + '
-CONTEXT: ' + ctx + '
-' + (notes ? 'NOTES: ' + notes + '
-' : '') + '
-Rules: 3-5 sentences. Under 100 words. Reference something REAL and SPECIFIC from the context. No generic openers. No pitch unless goal is call invite. Calm and direct. End with one low-pressure question or next step.';
+  var p = 'Write a LinkedIn DM for Amorette Digital Solutions.\n\nWHO: ' + wMap[document.getElementById('dw').value] + '\nGOAL: ' + gMap[document.getElementById('dg').value] + '\nCONTEXT: ' + ctx + '\n' + (notes ? 'NOTES: ' + notes + '\n' : '') + '\nRules: 3-5 sentences. Under 100 words. Reference something REAL and SPECIFIC from the context. No generic openers. No pitch unless goal is call invite. Calm and direct. End with one low-pressure question or next step.';
 
   var btn = document.getElementById('btn-dm');
   var outEl = document.getElementById('out-dm');
   var resEl = document.getElementById('dm-res');
   btn.disabled = true; btn.textContent = 'Generating...';
   outEl.classList.add('on'); resEl.innerHTML = ld();
-  try { resEl.textContent = await api(p); } catch(e) { resEl.innerHTML = err(e); }
+  try { resEl.textContent = await api(p); } catch(e) { resEl.innerHTML = errH(e); }
   btn.disabled = false; btn.textContent = 'Generate DM';
 }
 
